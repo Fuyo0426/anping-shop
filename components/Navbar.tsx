@@ -17,9 +17,20 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/90 backdrop-blur-md border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo - left aligned */}
-            <Link href="/" className="font-[family-name:var(--font-outfit)] text-xl font-bold tracking-tight text-[var(--color-text)]">
-              安平平安
+            {/* Logo - seal image */}
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-9 h-9 relative shrink-0">
+                <Image
+                  src="/logo.jpg"
+                  alt="安平平安印章"
+                  fill
+                  className="object-contain rounded-sm"
+                  sizes="36px"
+                />
+              </div>
+              <span className="font-[family-name:var(--font-outfit)] text-lg font-bold tracking-tight text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
+                安平平安
+              </span>
             </Link>
 
             {/* Desktop nav */}
